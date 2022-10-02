@@ -21,6 +21,7 @@ void multiply(int *a, int row1, int col1, int *b, int row2, int col2)
             d[i * col2 + j] = sum;
         }
     }
+    //tes
 
     for ( i = 0; i < size; i++) {
         if (i % col2 == 0) {
