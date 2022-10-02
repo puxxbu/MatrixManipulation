@@ -65,7 +65,7 @@ int main(void){
                     random=rand()%100+1;
 
                     array[rows][columns] = random;
-                    printf("%i\t",array[rows][columns]);
+                    printf("%d\t",array[rows][columns]);
                     // The code for converting 2D to 1D array 
                     arr_1D[count++] =  array[rows][columns];
                 }
@@ -77,6 +77,32 @@ int main(void){
     {
         printf("%d ", arr_1D[k]);
     }
+    
+    
+    // convert 1d to 2d
+    
+    printf("Enter the number of rows: ");
+    int N; 
+    scanf("%d", &N);
+
+    printf("Enter the number of columns: ");
+    int M; 
+    scanf("%d", &M);
+    
+    
+    
+    int arrayIndex = 0;
+    int m[N][M];
+    int a[6]={1,2,3,4,5,6};
+    int row,column;
+	for ( row = 0; row < N; ++row) {
+	    for ( column = 0; column < M; ++column) {
+	        m[row][column] = a[arrayIndex];
+	        printf("%d\t",m[row][column]);
+	        ++arrayIndex;
+	    }
+	    printf("\n");
+	}
 		
 	
 	
