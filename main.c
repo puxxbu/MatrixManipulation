@@ -21,7 +21,6 @@ void multiply(int *a, int row1, int col1, int *b, int row2, int col2)
             d[i * col2 + j] = sum;
         }
     }
-    //tes
 
     for ( i = 0; i < size; i++) {
         if (i % col2 == 0) {
@@ -39,11 +38,11 @@ void multiply(int *a, int row1, int col1, int *b, int row2, int col2)
 
 
 int main(void){
-	printf("Enter the number of rows: ");
+	printf("Masukan Baris: ");
     int i; 
     scanf("%d", &i);
 
-    printf("Enter the number of columns: ");
+    printf("Masukan Kolom: ");
     int y; 
     scanf("%d", &y);
 
@@ -53,7 +52,8 @@ int main(void){
     int k;
 
     srand((unsigned)time(NULL));
-
+	
+	//generate angka random
     int * arr_1D = malloc(sizeof(int) * i * y);
     if (arr_1D == NULL)
         exit(-1);
@@ -67,7 +67,7 @@ int main(void){
 
                     array[rows][columns] = random;
                     printf("%d\t",array[rows][columns]);
-                    // The code for converting 2D to 1D array 
+                    // Konversi array
                     arr_1D[count++] =  array[rows][columns];
                 }
 
@@ -79,18 +79,21 @@ int main(void){
         printf("%d ", arr_1D[k]);
     }
     
+    printf("\n");
     
-    // convert 1d to 2d
+    // konversi 1d ke 2d
     
-    printf("Enter the number of rows: ");
+    printf("Masukan Baris: ");
     int N; 
     scanf("%d", &N);
 
-    printf("Enter the number of columns: ");
+    printf("Masukan Kolom: ");
     int M; 
     scanf("%d", &M);
     
     
+    
+    // contoh array a[6]={1,2,3,4,5,6};
     
     int arrayIndex = 0;
     int m[N][M];
@@ -106,18 +109,27 @@ int main(void){
 	}
 		
 	
+	printf("\n Perkalian Matrix");
+	printf("\n  1, 2, 3,");
+	printf("\n  4, 5, 6,");
 	
-//    int a[] = {
-//        1, 2, 3,
-//        4, 5, 6,
-//    };
-//    int b[] = {
-//        7, 10,
-//        8, 11,
-//        9, 12,
-//    };
-//
-//    multiply(a, 2, 3, b, 3, 2);
+	printf("\n\n  7, 10,");
+	printf("\n\n  8, 11,");
+	printf("\n\n  9, 12,");
+	
+	//contoh perkalian matrix 1d
+    int arrA[] = {
+        1, 2, 3,
+        4, 5, 6,
+    };
+    int arrB[] = {
+        7, 10,
+        8, 11,
+        9, 12,
+    };
+	
+	printf("\n Hasil Perkalian \n");
+    multiply(arrA, 2, 3, arrB, 3, 2);
 }
 
 
